@@ -14,4 +14,10 @@ router.get("/notes", (req, res) => {
   // res.send('hello');
 });
 
+router.post("/notes", (req, res) => {
+  let data = fs.writeFileSync(path.resolve(__dirname, "../db/db.json"), "utf8");
+  console.log(data);
+  res.json(data);
+});
+
 module.exports = router;
