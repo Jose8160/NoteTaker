@@ -68,9 +68,9 @@ router.post("/notes", (req, res) => {
           return err;
         }
         console.log(arrayOfNotes);
+        res.send("success");
       }
     );
-    res.send("success");
   });
 });
 
